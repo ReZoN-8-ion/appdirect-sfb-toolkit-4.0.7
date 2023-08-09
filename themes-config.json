@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Classic - A theme built with simple HTML/CSS and jQuery.",
+    "value": {
+      "dependency": "@appdirect/sfb-theme-classic",
+      "name": "Classic"
+    }
+  },
+  {
+    "name": "Plaza - A modern theme built with react components that can be customized with Storefront Builder.",
+    "value": {
+      "dependency": "@appdirect/sfb-theme-plaza",
+      "name": "Plaza"
+    }
+  }
+]

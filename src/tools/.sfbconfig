@@ -1,0 +1,8 @@
+{
+    "defaultValues": {
+        "projectName": "sfb-themes",
+        "themeName": "classic",
+        "marketplacePath": "https://marketplace.appdirect.com",
+        "pageObjectsPath": "https://marketplace.appdirect.com/api/internal/storefront/v1"
+    }
+}

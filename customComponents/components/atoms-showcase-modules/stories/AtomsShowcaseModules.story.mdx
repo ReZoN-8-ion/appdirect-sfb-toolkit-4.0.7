@@ -1,0 +1,49 @@
+import { Story, Canvas, Meta, ArgsTable } from '@storybook/addon-docs/blocks';
+import { getKnobs } from '@appdirect/sfb-theme-components/src/tools/knobsHelper';
+import { TableContentFromObject, FormOutput, CollapsibleJsonSnippet } from '@appdirect/sfb-theme-components/src/tools/docTools';
+import AtomsShowcaseModules from '../AtomsShowcaseModules';
+
+export const atomShowcaseSettings = {
+    title: 'The title to display.',
+    description: 'The description or content of the component.',
+    ctaButton: 'Show/Hide a CTA button.',
+    ctaButtonLabel: 'The text for the button label.',
+    headerType: 'The type of header used by the title h1 to h5.',
+    descriptionSize: 'The size used in the description (bigger, standard, smaller).',
+    textStyling: 'The text style used in the description (bold, italic, strikethrough, underline).',
+    textOpacity: 'The opacity of the description (From 0 to 1).'
+};
+
+<Meta title="Custom Components/Atoms Showcase Modules" component={AtomsShowcaseModules} />
+
+# AtomsShowcaseModules
+<br />
+
+<h2> 
+<inlineCode>AtomsShowcaseModules</inlineCode> are an example of how to create a <strong>custom component</strong>&nbsp;
+by reusing/modifying components found in the <inlineCode>@appdirect/sfb-theme-components</inlineCode> npm module.
+</h2>
+<br />
+
+### Default
+<Canvas>
+    <Story name="Default">
+        <AtomsShowcaseModules settings={getKnobs(AtomsShowcaseModules.schema().form)} />
+    </Story>
+</Canvas>
+
+## Props
+<CollapsibleJsonSnippet
+    summary="settingsData"
+    code={getKnobs(AtomsShowcaseModules.schema().form)}
+/>
+<ArgsTable of={AtomsShowcaseModules} />
+
+## Schema
+### Form Settings
+<table>
+    <TableContentFromObject obj={atomShowcaseSettings} />
+</table>
+
+### Form Output
+<FormOutput code={AtomsShowcaseModules.schema().form} />

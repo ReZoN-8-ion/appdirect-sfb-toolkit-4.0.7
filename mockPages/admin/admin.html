@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="{{ config.locale.code }}">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% block meta_title %}<title>{{ meta.title }}</title>{% endblock %}
+  {% block meta_description %}<meta name="description" content="{{ meta.description }}">{% endblock %}
+  {% block meta_keywords %}<meta name="keywords" content="{{ meta.keywords }}">{% endblock %}
+  {% block meta_author %}<meta name="author" content="{{ meta.author }}">{% endblock %}
+  {% block other_meta %}
+
+  {% endblock %}
+   {% block meta_opengraph %}
+    <meta property="og:url" content="{{ meta.url }}" />
+    <meta property="og:type" content="{{ meta.type }}" />
+    <meta property="og:title" content="{{ meta.title }}" />
+    <meta property="og:description" content="{{ meta.description }}" />
+    <meta property="og:image" content="{{ meta.image }}" />
+  {% endblock %}
+
+  {% block meta_twitter %}
+    <meta property="twitter:card" content="{{ meta.card }}" />
+    <meta property="twitter:site" content="" />
+    <meta property="twitter:creator" content="" />
+  {% endblock %}
+
+  <link rel="shortcut icon" href="{{ config.channelSettings.customFavicon }}" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="theme-index.css">
+  <script src="{{ r("/assets/js/jquery-3.4.1.slim.min.js") }}"></script>
+</head>
+
+<body data-page="{% block dataPage %}{% endblock %}">
+    {% block header %}
+        <div id="header-universal" role="heading" aria-level="1"></div>
+    {% endblock %}
+    <div class="mock-content">
+        <img src="myApps.png" alt="My Apps">
+    </div>
+    {% block footer %}
+        <div id="footer-universal" role="contentinfo"></div>
+    {% endblock %}
+</body>
+</html>
